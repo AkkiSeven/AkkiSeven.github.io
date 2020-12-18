@@ -1,0 +1,67 @@
+.line{
+    margin-right: 250px;
+    margin-left: 300px;
+    width: 500px;
+    height: 10px;
+    border-bottom: 2px solid white;
+    position: absolute;
+    }
+
+
+
+/*
+.arrow {
+  width: 402px;
+}
+.line {
+  margin-top: 10px;
+  width: 400px;
+  background: white;
+  height: 3px;
+  float: left;
+}
+
+.point {
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid white;
+  float: right;
+}
+
+*/
+.dot {
+  height: 20px;
+  width: 20px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.O {
+ margin-left: 0;
+ margin-bottom: -35px;
+
+}
+
+.A {
+    margin-bottom: -35px;
+    margin-left: 50px;
+
+}
+.B {
+
+ margin-bottom: -35px;
+ margin-left: 250px;
+}
+.angle-demo {
+    margin-left: 250px;
+    width: 300px;
+    height: 300px;
+}
+
+<style>
+	strong {
+		color: red;
+	}
+</style>

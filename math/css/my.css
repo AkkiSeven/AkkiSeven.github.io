@@ -60,8 +60,12 @@
     height: 300px;
 }
 
-<style>
-	strong {
-		color: red;
-	}
-</style>
+/*
+.rectangle {
+  margin-left: 600px;
+  margin-top: -130px;
+} */
+
+strong {
+  color: red;
+}

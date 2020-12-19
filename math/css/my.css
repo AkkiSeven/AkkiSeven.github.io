@@ -150,11 +150,21 @@ strong {
   border-color: #bfbfbf;
   margin: 0em;
 }
+.semicircle {
+  position: absolute; 
+  top: 60%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  height: 100px; 
+  width: 200px; 
+  border-radius: 150px 150px 0 0; 
+  border: 2px solid #bfbfbf;
+}
 .circle-line {
-  display: block;
-  position: absolute;
-  top: 53%;
-  left: 30%;
+display: block;
+position: absolute;
+top: 53%;
+left: 30%;
   width: 8em;
   height: 8em;
   border-style: solid;
@@ -162,6 +172,74 @@ strong {
   border-color: #bfbfbf;
   margin: 0em;
 }
+/*
+.semi {
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  height: 600px;
+ }
+ */
+.semi-board {
+  margin-top: 70px;
+  min-height: 300px;
+  min-width: 300px;
+  font-size: 0; /* handle collapsing margins */
+}
+game-board {
+  margin-top: 70px;
+  min-height: 300px;
+  min-width: 300px;
+  font-size: 0; /* handle collapsing margins */
+}
+
+.quadrant {
+  border-style: solid;
+  border-color: #eee;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+.semi {
+  border-style: solid;
+  border-color: #eee;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+
+.semi-left {
+  border-bottom-left-radius: 100%;
+  border-width: 2px;
+  border-right: 0;
+}
+
+.semi-right {
+  border-bottom-right-radius: 100%;
+  border-width: 2px;
+  border-left: 0;
+
+}
+.top-left {
+  border-top-left-radius: 100%;
+  border-width: 4px 2px 2px 4px;
+}
+
+.top-right {
+  border-top-right-radius: 100%;
+  border-width: 4px 4px 2px 2px;
+}
+
+.bottom-left {
+  border-bottom-left-radius: 100%;
+  border-width: 2px 2px 4px 4px;
+}
+
+.bottom-right {
+  border-bottom-right-radius: 100%;
+  border-width: 2px 4px 4px 2px;
+}
+
 
 .circle-dot {
   position: absolute;
@@ -209,4 +287,161 @@ strong {
 .circle-border {
   width: 200px;
   height: 200px;
+}
+
+.divsym {
+  margin-left: 300px;
+  display: flex;
+  animation: symmetry-right 3s ;
+}
+.symmetry{
+  width: 120px;
+}
+.right-arrow {
+  transform: scaleX(-1);
+}
+@keyframes symmetry-right {
+  0%,
+  50% {
+    transform: rotate(-135deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+.container {
+  margin-left: 300px;
+  padding-bottom: 50px;
+}
+
+div#butterfly{
+    position absolute;
+    left:0px;
+    top:0px;
+    width: 366px;
+    height: 208px;
+    
+    -webkit-transform: rotate(-20deg)  translate(30px, 60px) scale(0.8, 0.8);
+    -webkit-transform-origin: center center;
+    -moz-transform: rotate(-20deg)  translate(30px, 60px) scale(0.8, 0.8);
+    -moz-transform-origin: center center;
+}
+
+div#rightwing{
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 178px;
+    height: 208px;
+    background-image: url(http://www.eleqtriq.com/wp-content/static/demos/2010/css3d/img/wing.png);
+    background-repeat:no-repeat;
+    
+    -webkit-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
+    -webkit-transform-origin: center right;
+    -webkit-animation-name: rightwingani;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-transform: rotate3d(0, 0, 0, 180deg); /* Mirror left wing */
+    -moz-transform-origin: center right;
+    -moz-animation-name: rightwingani;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes rightwingani {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    30% {
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    50% {
+        -webkit-transform: rotate3d(0, 1, 0, 100deg);
+    }
+    70%{
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    to{
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    }
+}
+
+@-moz-keyframes rightwingani {
+    from {
+        -moz-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    30% {
+        -moz-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    50% {
+        -moz-transform: rotate3d(0, 1, 0, 100deg);
+    }
+    70%{
+        -moz-transform: rotate3d(0, 1, 0, 180deg);
+    }
+    to{
+        -moz-transform: rotate3d(0, 1, 0, 180deg);
+    }
+}
+
+div#leftwing{
+    position: absolute;
+    left:0px;
+    top:0px;
+    width: 178px;
+    height: 208px;
+    background-image: url(http://www.eleqtriq.com/wp-content/static/demos/2010/css3d/img/wing.png);
+    background-repeat: no-repeat;
+    
+    -webkit-transform-origin: top right;
+    -webkit-animation-name: leftwingani;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    
+    -moz-transform-origin: top right;
+    -moz-animation-name: leftwingani;
+    -moz-animation-duration: 8s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes leftwingani {
+    from {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    }
+    30%  {
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% {
+        -webkit-transform: rotate3d(0, 1, 0, 80deg);
+    }
+    70%{
+        -webkit-transform: rotate3d(0, 1, 0, 00deg);
+    }
+    to{
+        -webkit-transform: rotate3d(0, 1, 0, 00deg);
+    }
+}
+
+
+@-moz-keyframes leftwingani {
+    from {
+        -moz-transform: rotate3d(0, 1, 0, 0deg);
+    }
+    30%  {
+        -moz-transform: rotate3d(0, 1, 0, 0deg);
+    }
+    50% {
+        -moz-transform: rotate3d(0, 1, 0, 80deg);
+    }
+    70%{
+        -moz-transform: rotate3d(0, 1, 0, 00deg);
+    }
+    to{
+        -moz-transform: rotate3d(0, 1, 0, 00deg);
+    }
 }

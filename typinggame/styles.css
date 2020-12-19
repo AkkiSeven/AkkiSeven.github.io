@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    zoom: 115%;
+    overflow: hidden;
 }
 
 body {

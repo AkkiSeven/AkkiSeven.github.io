@@ -58,7 +58,7 @@ After node is installed in your system, you can download the code of the repo(Ei
 <br>
 After you click the download code button, click the download zip button.👇🏼
 <br>
-![github download zip button](https://www.wikihow.com/images/thumb/2/21/Download-a-GitHub-Folder-Step-4.jpg/v4-460px-Download-a-GitHub-Folder-Step-4.jpg.webp "github download zip button")
+![github download zip button](https://res.cloudinary.com/practicaldev/image/fetch/s--vuzbvzfo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/0mepmnsme5n2ladav5mp.png "github download zip button")
 <br>
 This will download a zip file in your computer. 
 <br>

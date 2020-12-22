@@ -1,8 +1,15 @@
-# Getting Started with Create React App
+# Photo Editor (CoEdit)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using react. ([Create React App](https://github.com/facebook/create-react-app).)
 
-## Available Scripts
+## Running the app
+### Runnign on web
+If you want to run the app on the web, it is simple. Click [here](https://akkiseven.github.io/photoeditor) to run the app. No additional components required.
+
+### Installing CoEdit by compiling 
+To compile the app, make sure you have node installed in your system. If not, click [here](https://nodejs.org/en/download/) to install node. I recommend node js LTS but feel free to use any version. Select the operating system you want node to be installed, and install it in your system.If you are unsure whether you have node installed on your system, type the following command.
+###### `node --version`
+
 
 In the project directory, you can run:
 

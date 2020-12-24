@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# Photo Editor (CoEdit)📷
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using react.
 
-## Available Scripts
+## Running the app
+👇🏼 Follow the below instructions to run the app.
+<br>
 
-In the project directory, you can run:
+## Running on web
+If you want to run the app on the web, <br>
+it is simple. <br>
+Click [here](https://akkiseven.github.io/photoeditor) to run the app. 
+<br>
+No additional components required.
 
-### `yarn start`
+## Using CoEdit by compiling
+If you are interested of checking out the code and making changes to it, 
+<br>
+you can compile this app. 
+<br>
+(Remember this won't effect the real code unless you apply a pull request. After I accept the pull request, the code can be successfuly be merged to the main branch!) 
+<br>
+If you want to fix any bugs or add features, feel free to add a pull request!
+<br>
+<br>
+To compile the app, 
+<br>
+make sure you have node installed in your system.
+<br> 
+If not, 
+<br>
+click [here](https://nodejs.org/en/download/) to install node. 
+<br>
+I recommend node LTS but feel free to use any version. 
+<br>
+Select the operating system you want node to be installed, 
+<br>
+and go through the installation.
+<br>
+If you are unsure whether you have node installed on your system, 
+<br>
+type the following command.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### `node --version`
+If you don't get any errors, 
+<br>
+and get an version number, for example
+<br>
+#####   `v14.15.0`
+then you have node installed in your system.
+<br>
+If you get an error, for example "command not found", then download node as given in the above steps.👆🏻
+<br>
+<br>
+After node is installed in your system, you can download the code of the repo(Either by using git, or github). However, I am using github, just to keep it simple. Click [here](https://github.com/AkkiSeven/AkkiSeven.github.io) to open my github repo, and then click the download code button as given below.👇🏼
+<br>
+![github download code button](https://cdn.statically.io/img/teckangaroo.com/f=auto/wp-content/uploads/2020/09/Screenshot_32-5.png "github download code button")
+<br>
+After you click the download code button, click the download zip button.👇🏼
+<br>
+![github download zip button](https://res.cloudinary.com/practicaldev/image/fetch/s--vuzbvzfo--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/0mepmnsme5n2ladav5mp.png "github download zip button")
+<br>
+This will download a zip file in your computer. 
+<br>
+<br>
+Unzip the file to wherever you want to save it.
+<br>
+Then open the "📁akkiseven.github.io📁" folder in your terminal or command prompt.
+<br>
+<br>
+Then type the following command:
+### `cd photoeditor`
+<br>
+Almost finished!
+<br>
+Since you installed node, you get a command called npm. Enter the following command in the terminal or command prompt:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm install`
 
-### `yarn test`
+this will take approximately 2 minutes to run.
+<br>
+After this finishes, type the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm start`
 
-### `yarn build`
+after a few seconds, you should get the CoEdit website up and running!
+<br>
+<br>
+You can now edit the code!
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The code is successfully compiled!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you want to fix any bugs or add features, feel free to add a pull request!

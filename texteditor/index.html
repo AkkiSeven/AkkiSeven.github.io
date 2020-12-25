@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rich Text Editor</title>
+    <script src="https://kit.fontawesome.com/6813840923.js"></script>
+  </head>
+  <body onload="enableEditMode();">
+    <div>
+      <button onclick="execCmd('bold')"><i class="fas fa-bold"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-italic"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-underline"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-strikethrough"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-align-left"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-align-center"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-align-right"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-align-justify"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-cut"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-copy"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-paste"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-indent"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-outdent"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-subscript"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-superscript"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-undo"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-redo"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-list-ul"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-list-ol"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-paragraph"></i></button>
+      <select>
+        <option value="H1">H1</option>
+        <option value="H2">H2</option>
+        <option value="H3">H3</option>
+        <option value="H4">H4</option>
+        <option value="H5">H5</option>
+        <option value="H6">H6</option>
+      </select>
+      <button onclick="execCmd('bold')"><i class="fas fa-ruler-horizontal"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-link"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-unlink"></i></button>
+      <button onclick="execCmd('bold')"><i class="fas fa-code"></i></button>
+      <button onclick="execCmd('bold')"><i class="far fa-edit"></i></button>
+      <br>
+      <select>
+        <option value="Arial">Arial</option>
+        <option value="Comic Sans MS">Comic Sans MS</option>
+        <option value="Courier">Courier</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Helvetica Neue">Helvetica Neue</option>
+        <option value="Roboto">Roboto</option>
+        <option value="sans-serif">sans-serif</option>
+      </select>
+      <select>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+      Text Color: <input type="color" />
+      Background Color: <input type="color" />
+      <button onclick="execCmd('bold')"><i class="far fa-file-image"></i></button>
+      <button onclick="execCmd('bold')">Select All</button>
+    </div>
+    <iframe name="richTextField" style="width: 1908px; height: 803px"></iframe>
+    <script type="text/javascript">
+
+      function enableEditMode() {
+        richTextField.document.designMode = "On";
+      }
+
+      function execCmd(command) {
+        richTextField.document.execCommand(command, false, null);
+      }
+
+    </script>
+  </body>
+</html>

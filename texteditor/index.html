@@ -36,7 +36,7 @@
         <option value="H6">H6</option>
       </select>
       <button onclick="execCmd('insertHorizontalRule')"><i class="fas fa-ruler-horizontal"></i></button>
-      <button onclick="execCmd('createLink', prompt('Enter a URL', 'http:/'))"><i class="fas fa-link"></i></button>
+      <button onclick="execCommandWithArg('createLink', prompt('Enter a URL', 'http://'));"><i class="fa fa-link"></i></button>
       <button onclick="execCmd('unlink')"><i class="fas fa-unlink"></i></button>
       <button onclick="toggleSource()"><i class="fas fa-code"></i></button>
       <button onclick="toggleEdit()"><i class="far fa-edit"></i></button>
@@ -65,11 +65,15 @@
       </select>
       Text Color: <input type="color" onchange="execCommandWithArg('foreColor', this.value);"/> 
       Background Text Color: <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);"/>
-      <button onclick="execCmd('bold')"><i class="far fa-file-image"></i></button>
-      <button onclick="execCmd('bold')">Select All</button>
+      <button onclick="execCommandWithArg('insertImage', prompt('Enter the image URL', ''))"><i class="far fa-file-image"></i></button>
+      <button onclick="execCmd('selectAll');">Select All</button>
     </div>
     <iframe name="richTextField" style="width: 1908px; height: 776px"></iframe>
     <script type="text/javascript">
+
+      var showingSourceCode = false;
+      var isInEditMode = true;
+
       function enableEditMode() {
         richTextField.document.designMode = "On";
       }
@@ -82,6 +86,25 @@
         richTextField.document.execCommand(command, false, arg);
       }
 
+      function toggleSource() {
+        if(showingSourceCode){
+          richTextField.document.getElementsByTagName('body')[0].innerHTML = richTextField.document.getElementsByTagName('body')[0].textContent;
+          showingSourceCode = false;
+        } else {
+          richTextField.document.getElementsByTagName('body')[0].textContent = richTextField.document.getElementsByTagName('body')[0].innerHTML;
+          showingSourceCode = true;
+        }
+      }
+
+      function toggleEdit () {
+        if(isInEditMode) {
+          richTextField.document.designMode = "Off";
+          isInEditMode = false;
+        } else {
+          richTextField.document.designMode = "On";
+          isInEditMode = true;
+        }
+      }
 
     </script>
   </body>

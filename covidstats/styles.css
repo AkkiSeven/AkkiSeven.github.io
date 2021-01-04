@@ -39,8 +39,59 @@ div {
 }
 .data-container {
   border: 2px solid #feb47b;
-  margin-right: 30%;
-  margin-left: 30%;
+  margin-left: 10%;
+  width: 500px;
+
+}
+h4 {
+  font-size: 85%;
+  color: gray;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+}
+.footer {
+  font-family: 'Roboto', sans-serif;
+  bottom: 0;
+  font-size: 75%;
+  padding: 5px;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.stats-us-container {
+  text-align: center;
+  float: right;
+  display: inline-block;
+}
+.location-us-container {
+  display: inline-block;
+}
+.data-us-container {
+  border: 2px solid #feb47b;
+  margin-top: -300px;
+  margin-left: 50%;
+  width: 500px;
 
 }
 h4 {

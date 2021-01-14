@@ -1,0 +1,27 @@
+body {
+    overflow: hidden;
+}
+
+textarea {
+  background-color: rgb(47, 47, 47);
+  color: white;
+  width: 400px;
+  height: 280px;
+  display: flex;
+  position: relative;
+  left: -8px;
+  top: -8px;
+  border-radius: 5px;
+  border: 1px solid rgb(57, 57, 57);
+  resize: none;
+}
+
+iframe {
+  position: relative;
+  top: -865px;
+  left: 400px;
+  width: 1510px;
+  height: 855px;
+  border: none;
+  background-color: white;
+}

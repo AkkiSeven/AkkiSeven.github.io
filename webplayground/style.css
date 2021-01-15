@@ -1,5 +1,10 @@
 body {
-    overflow: hidden;
+  overflow: hidden;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 20px;
 }
 
 textarea {
@@ -24,4 +29,29 @@ iframe {
   height: 855px;
   border: none;
   background-color: white;
+}
+
+@media screen and (max-width: 720px) {
+  textarea {
+    background-color: rgb(47, 47, 47);
+    color: white;
+    width: 200px;
+    height: 305px;
+    display: flex;
+    position: relative;
+    left: -8px;
+    top: -8px;
+    border-radius: 5px;
+    border: 1px solid rgb(57, 57, 57);
+    resize: none;
+  }
+
+  iframe {
+    position: fixed;
+    top: 1px;
+    left: 206px;
+    width: 468px;
+    height: 933px;
+    border: none;
+  }
 }

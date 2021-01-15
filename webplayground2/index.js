@@ -1,4 +1,3 @@
-console.log("*****index.js*****");
 function update() {
   var idoc = document.getElementById("iframe").contentWindow.document;
 
@@ -9,7 +8,7 @@ function update() {
 
 function setupEditor() {
   window.editor = ace.edit("editor");
-  editor.setTheme("ace/theme/monokai");
+  editor.setTheme("ace/theme/idle_fingers");
   editor.getSession().setMode("ace/mode/html");
   editor.setValue(
     `<!DOCTYPE html>
@@ -42,12 +41,12 @@ function setupEditor() {
     showLineNumbers: true,
     showGutter: true,
     vScrollBarAlwaysVisible: true,
-    enableBasicAutocompletion: false,
-    enableLiveAutocompletion: false,
+    enableBasicAutocompletion: true,
+    enableLiveAutocompletion: true,
   });
 
   editor.setShowPrintMargin(false);
-  editor.setBehavioursEnabled(false);
+  editor.setBehavioursEnabled(true);
 }
 
 function ready() {

@@ -1,0 +1,155 @@
+body {
+  --nav-load-time: 300ms;
+  --nav-link-load-time: 500ms;
+  --article-load-delay: calc(var(--nav-load-time) + var(--nav-link-load-time))
+}
+
+header {
+  animation: nav-load var(--nav-load-time) ease-out;
+}
+
+nav li {
+  display: flex;
+  animation-name: nav-link-load;
+  animation-duration: var(--nav-link-load-time);
+  animation-timing-function: ease-in;
+  animation-delay: var(--nav-load-time);
+  animation-fill-mode: forwards;
+  transform: scale(0);
+}
+
+nav li:first-child {
+  animation-name: nav-first-link-load;
+  transform: translateX(-1000%);
+}
+
+nav li:last-child {
+  animation-name: nav-last-link-load;
+  transform: translateX(1000%);
+}
+
+h1 {
+  animation: article-load 300ms ease-in var(--article-load-delay);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.framework {
+  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 500ms);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.follow {
+  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 500ms);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+p {
+  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 200ms);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.start, .download {
+  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 600ms);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+hr {
+  animation: article-load 300ms ease-in calc(var(--article-load-delay) + 1s);
+  animation-fill-mode: forwards;
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+pre code {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+}
+
+.codeexample {
+  background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.copy {
+  color: white;
+}
+
+@keyframes nav-load {
+  0% {
+    transform: translateY(-100%)
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes nav-link-load {
+  0% {
+    transform: scale(0);
+  }
+
+  90% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes nav-first-link-load {
+  0% {
+    transform: translateX(-1000%);
+  }
+
+  90% {
+    transform: translateX(30%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes nav-last-link-load {
+  0% {
+    transform: translateX(1000%);
+  }
+
+  90% {
+    transform: translateX(-30%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes article-load {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AkkiMarker · Bookmark your favorite sites completely for free</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/cover/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://sweetalert.js.org/assets/sweetalert/sweetalert.min.js"></script>
+  </head>
+
+  <body
+    class="d-flex h-100 text-center text-white bg-dark"
+    onload="fetchBookmarks()"
+  >
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">AkkiMarker</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link active" aria-current="page" href="#"
+              >Fork on Github</a
+            >
+            <a class="nav-link" href="#">About AkkiMarker</a>
+          </nav>
+        </div>
+      </header>
+      <main class="px-3">
+        <h1>Book Mark your favorite websites with ease.</h1>
+        <p class="lead">
+          AkkiMarker is a powerful bookmarker app, which allows you to bookmark
+          websites.
+        </p>
+        <br />
+        <form id="myForm">
+          <div class="form-group">
+            <label>Site Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="siteName"
+              placeholder="Website Name"
+            />
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Site URL</label>
+            <input
+              type="text"
+              class="form-control"
+              id="siteUrl"
+              placeholder="Site URL"
+              data-focusable="true"
+            />
+          </div>
+          <br />
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </main>
+      <br />
+      <div class="row marketing">
+        <div class="col-lg-12">
+          <div id="bookmarksResults"></div>
+        </div>
+      </div>
+      <footer class="mt-auto text-white-50">
+        <p>
+          copyright &copy;
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          by
+          <a
+            href="https://AkkiSeven.github.io"
+            target="_blank"
+            style="text-decoration: none"
+            >AkkiSeven, Inc</a
+          >. All rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

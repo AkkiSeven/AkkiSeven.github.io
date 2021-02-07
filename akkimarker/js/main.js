@@ -95,8 +95,9 @@ function fetchBookmarks(){
 // Validate Form
 function validateForm(siteName, siteUrl){
   if(!siteName || !siteUrl){
-    swal("Please fill in the site name and url");
+    Swal.fire( "Error" ,  "Please fill in the site name and url" ,  "error" )
     swal ( "Error" ,  "Please fill in the site name and url" ,  "error" )
+    
     return false;
   }
 

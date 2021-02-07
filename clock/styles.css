@@ -1,0 +1,37 @@
+* {
+  color: black;
+  font-family: Helvetica;
+}
+
+body {
+  background-color: grey;
+}
+
+h1,
+h2,
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.helpful {
+  position: relative;
+  left: -215px;
+  top: 43px;
+}
+
+h3 {
+  margin-left: 110px;
+}
+
+img {
+  width: 400px;
+  margin-left: 650px;
+  margin-top: 10px;
+}
+
+h4 {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}

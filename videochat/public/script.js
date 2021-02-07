@@ -37,9 +37,9 @@ function connectToNewUser(userId, stream) {
   })
 }
 
-//socket.on('user-connected', userId => {
-//  console.log('User connected: ' + userId)
-//})
+socket.on('user-connected', userId => {
+  console.log('User connected: ' + userId)
+})
 
 function addVideoStream(video, stream) {
   video.srcObject = stream

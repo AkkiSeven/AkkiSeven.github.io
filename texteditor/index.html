@@ -2,31 +2,57 @@
 <html lang="en">
   <head>
     <title>Rich Text Editor</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/6813840923.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body onload="enableEditMode();">
     <div>
       <button onclick="execCmd('bold')"><i class="fas fa-bold"></i></button>
       <button onclick="execCmd('italic')"><i class="fas fa-italic"></i></button>
-      <button onclick="execCmd('underline')"><i class="fas fa-underline"></i></button>
-      <button onclick="execCmd('strikeThrough')"><i class="fas fa-strikethrough"></i></button>
-      <button onclick="execCmd('justifyLeft')"><i class="fas fa-align-left"></i></button>
-      <button onclick="execCmd('justifyCenter')"><i class="fas fa-align-center"></i></button>
-      <button onclick="execCmd('justifyRight')"><i class="fas fa-align-right"></i></button>
-      <button onclick="execCmd('justifyFull')"><i class="fas fa-align-justify"></i></button>
+      <button onclick="execCmd('underline')">
+        <i class="fas fa-underline"></i>
+      </button>
+      <button onclick="execCmd('strikeThrough')">
+        <i class="fas fa-strikethrough"></i>
+      </button>
+      <button onclick="execCmd('justifyLeft')">
+        <i class="fas fa-align-left"></i>
+      </button>
+      <button onclick="execCmd('justifyCenter')">
+        <i class="fas fa-align-center"></i>
+      </button>
+      <button onclick="execCmd('justifyRight')">
+        <i class="fas fa-align-right"></i>
+      </button>
+      <button onclick="execCmd('justifyFull')">
+        <i class="fas fa-align-justify"></i>
+      </button>
       <button onclick="execCmd('cut')"><i class="fas fa-cut"></i></button>
       <button onclick="execCmd('copy')"><i class="fas fa-copy"></i></button>
       <button onclick="execCmd('paste')"><i class="fas fa-paste"></i></button>
       <button onclick="execCmd('indent')"><i class="fas fa-indent"></i></button>
-      <button onclick="execCmd('outdent')"><i class="fas fa-outdent"></i></button>
-      <button onclick="execCmd('subscript')"><i class="fas fa-subscript"></i></button>
-      <button onclick="execCmd('superscript')"><i class="fas fa-superscript"></i></button>
+      <button onclick="execCmd('outdent')">
+        <i class="fas fa-outdent"></i>
+      </button>
+      <button onclick="execCmd('subscript')">
+        <i class="fas fa-subscript"></i>
+      </button>
+      <button onclick="execCmd('superscript')">
+        <i class="fas fa-superscript"></i>
+      </button>
       <button onclick="execCmd('undo')"><i class="fas fa-undo"></i></button>
       <button onclick="execCmd('redo')"><i class="fas fa-redo"></i></button>
-      <button onclick="execCmd('insertUnorderedList')"><i class="fas fa-list-ul"></i></button>
-      <button onclick="execCmd('insertOrderedList')"><i class="fas fa-list-ol"></i></button>
-      <button onclick="execCmd('insertParagraph')"><i class="fas fa-paragraph"></i></button>
+      <button onclick="execCmd('insertUnorderedList')">
+        <i class="fas fa-list-ul"></i>
+      </button>
+      <button onclick="execCmd('insertOrderedList')">
+        <i class="fas fa-list-ol"></i>
+      </button>
+      <button onclick="execCmd('insertParagraph')">
+        <i class="fas fa-paragraph"></i>
+      </button>
       <select onchange="execCommandWithArg('formatBlock', this.value);">
         <option value="H1">H1</option>
         <option value="H2">H2</option>
@@ -35,8 +61,14 @@
         <option value="H5">H5</option>
         <option value="H6">H6</option>
       </select>
-      <button onclick="execCmd('insertHorizontalRule')"><i class="fas fa-ruler-horizontal"></i></button>
-      <button onclick="execCommandWithArg('createLink', prompt('Enter a URL', 'http://'));"><i class="fa fa-link"></i></button>
+      <button onclick="execCmd('insertHorizontalRule')">
+        <i class="fas fa-ruler-horizontal"></i>
+      </button>
+      <button
+        onclick="execCommandWithArg('createLink', prompt('Enter a URL', 'http://'));"
+      >
+        <i class="fa fa-link"></i>
+      </button>
       <button onclick="execCmd('unlink')"><i class="fas fa-unlink"></i></button>
       <button onclick="toggleSource()"><i class="fas fa-code"></i></button>
       <button onclick="toggleEdit()"><i class="far fa-edit"></i></button>
@@ -63,49 +95,23 @@
         <option value="6">6</option>
         <option value="7">7</option>
       </select>
-      Text Color: <input type="color" onchange="execCommandWithArg('foreColor', this.value);"/> 
-      Background Text Color: <input type="color" onchange="execCommandWithArg('hiliteColor', this.value);"/>
-      <button onclick="execCommandWithArg('insertImage', prompt('Enter the image URL', ''))"><i class="far fa-file-image"></i></button>
+      Text Color:
+      <input
+        type="color"
+        onchange="execCommandWithArg('foreColor', this.value);"
+      />
+      Background Text Color:
+      <input
+        type="color"
+        onchange="execCommandWithArg('hiliteColor', this.value);"
+      />
+      <button
+        onclick="execCommandWithArg('insertImage', prompt('Enter the image URL', ''))"
+      >
+        <i class="far fa-file-image"></i>
+      </button>
       <button onclick="execCmd('selectAll');">Select All</button>
     </div>
-    <iframe name="richTextField" style="width: 1908px; height: 776px"></iframe>
-    <script type="text/javascript">
-
-      var showingSourceCode = false;
-      var isInEditMode = true;
-
-      function enableEditMode() {
-        richTextField.document.designMode = "On";
-      }
-
-      function execCmd(command) {
-        richTextField.document.execCommand(command, false, null);
-      }
-
-      function execCommandWithArg(command, arg) {
-        richTextField.document.execCommand(command, false, arg);
-      }
-
-      function toggleSource() {
-        if(showingSourceCode){
-          richTextField.document.getElementsByTagName('body')[0].innerHTML = richTextField.document.getElementsByTagName('body')[0].textContent;
-          showingSourceCode = false;
-        } else {
-          richTextField.document.getElementsByTagName('body')[0].textContent = richTextField.document.getElementsByTagName('body')[0].innerHTML;
-          showingSourceCode = true;
-        }
-      }
-
-      function toggleEdit () {
-        if(isInEditMode) {
-          richTextField.document.designMode = "Off";
-          isInEditMode = false;
-        } else {
-          richTextField.document.designMode = "On";
-          isInEditMode = true;
-        }
-      }
-
-    </script>
+    <iframe name="richTextField"></iframe>
   </body>
 </html>

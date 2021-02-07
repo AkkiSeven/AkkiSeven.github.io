@@ -108,5 +108,10 @@
         Feel free to take a look at my projects!
       </p>
     </main>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+      }
+    </script>
   </body>
 </html>

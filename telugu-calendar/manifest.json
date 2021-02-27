@@ -1,0 +1,16 @@
+{
+  "name": "Telugu Calendar",
+  "short_name": "Telugu Calendar",
+  "start_url": ".",
+  "background_color": "#fff",
+  "theme_color": "#333",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "images/calendar.png",
+      "sizes": "600x600",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

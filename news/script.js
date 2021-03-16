@@ -15,7 +15,7 @@ function renderBooks(json) {
 
 function fetchNews() {
   return fetch(
-    "http://newsapi.org/v2/everything?q=apple&from=2021-03-15&to=2021-03-15&sortBy=popularity&apiKey=c59b8672503f45b6b542a1158e099b97"
+    "https://newsapi.org/v2/everything?q=apple&from=2021-03-15&to=2021-03-15&sortBy=popularity&apiKey=c59b8672503f45b6b542a1158e099b97"
   )
     .then((resp) => resp.json())
     .then((json) => {
